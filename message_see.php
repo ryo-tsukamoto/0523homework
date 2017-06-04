@@ -14,7 +14,7 @@ if ($mysqli->connect_errno) {
 
 //コメントの登録
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  if (!empty($_POST['writer']) && !empty($_POST['body']) && !empty($_POST['password'])) {    //nameと,comment,passwordの値が空値でない場合
+  if (!empty($_POST['id']) && !empty($_POST['writer']) && !empty($_POST['body']) && !empty($_POST['password'])) {    //nameと,comment,passwordの値が空値でない場合
     //SQLインジェクション処理
     $id = $mysqli->real_escape_string($_POST['id']);
     $writer = $mysqli->real_escape_string($_POST['writer']);
